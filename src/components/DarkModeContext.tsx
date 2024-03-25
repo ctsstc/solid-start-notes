@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, createSignal, Signal, useContext } from "solid-js";
+import { createContext, createSignal, Signal, useContext } from 'solid-js';
+
 export const context = createContext<Signal<boolean>>();
 
 export const Provider = props => {
@@ -12,8 +13,9 @@ export const Provider = props => {
   );
 };
 
-export const DarkModeToggle = props => {
+export const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useContext(context);
+  
   return (
     <button
       class="dark-mode-toggle"
