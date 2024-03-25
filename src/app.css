@@ -496,6 +496,13 @@ ul.notes-list {
   color: transparent;
   font-size: 0px;
 }
+.sidebar-note-open.is-pending {
+  background-color: var(--gray-80);
+}
+.sidebar-note-open.is-active {
+  background-color: var(--tertiary-blue);
+  border: 1px solid var(--primary-border);
+}
 .sidebar-note-open:focus {
   box-shadow: var(--outline-box-shadow);
 }
