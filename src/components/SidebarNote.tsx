@@ -34,9 +34,6 @@ export default function SidebarNote(props: { note: Note }) {
       onAnimationEnd={() => {
         itemRef.classList.remove("flash");
       }}
-      style={{
-        color: "black",
-      }}
       class={classHelper(
         "sidebar-note-list-item",
         isExpanded() ? "note-expanded" : ""
