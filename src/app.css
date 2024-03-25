@@ -24,6 +24,7 @@ solid-island, solid-children, outlet-wrapper {
 
 .note-preview {
   word-break: break-word;
+  margin-block-start: 50px;
 }
 
 /* Remove default margin */
@@ -132,6 +133,7 @@ select {
   --dark-gray-60: #a9a9a9;
   --dark-gray-70: #8e8e8e;
   --dark-gray-80: #6e6e6e;
+  --dark-gray-85: #5e5e5e;
   --dark-gray-90: #4e4e4e;
   --dark-gray-95: #3a3a3a;
   --dark-gray-98: #2e2e2e;
@@ -645,9 +647,6 @@ ul.notes-list {
   white-space: nowrap;
   margin-inline-start: 12px;
 }
-.note-preview {
-  margin-block-start: 50px;
-}
 
 .note-editor {
   background: var(--white);
@@ -759,6 +758,31 @@ ul.notes-list {
 .note-editor-done[disabled],
 .note-editor-delete[disabled] {
   opacity: 0.5;
+}
+
+.dark .note-editor {
+  background: var(--dark-gray-90);
+}
+
+.dark .note-editor-form input, 
+.dark .note-editor-form textarea {
+  background: var(--dark-gray-80);
+  border-color: var(--dark-gray-70);
+  color: var(--dark-gray-10);
+}
+
+.dark .note-editor-form input:focus,
+.dark .note-editor-form textarea:focus {
+  box-shadow: 0 0 0 2px var(--primary-blue);
+}
+
+.dark .note-editor-delete:hover:not([disabled]) {
+  background: var(--red-50);
+}
+
+.dark .label--preview {
+  background: var(--dark-gray-85);
+  color: var(--dark-primary-blue);
 }
 
 .label {
