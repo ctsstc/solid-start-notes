@@ -123,6 +123,131 @@ select {
     Ubuntu, Helvetica, sans-serif;
   --monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
     monospace;
+
+  /* Dark Mode */
+  --dark-background: #1e1e1e;
+  --dark-foreground: #d4d4d4;
+
+  --dark-primary-text: #d4d4d4;
+  --dark-secondary-text: #a9a9a9;
+
+  --dark-border-color: #383838;
+
+  --dark-gray-20: #d4d4d4;  
+  --dark-gray-60: #a9a9a9;
+  --dark-gray-70: #8e8e8e;
+  --dark-gray-80: #6e6e6e;
+  --dark-gray-90: #4e4e4e;
+  --dark-gray-95: #3a3a3a;
+  --dark-gray-100: #1e1e1e;
+
+  --dark-primary-blue: #2584ff;
+  --dark-secondary-blue: #1a72ff;
+  --dark-tertiary-blue: #003973;
+  --dark-flash-blue: #0063b2;
+
+  --dark-red-25: #ff453a; 
+
+  --dark-yellow: #ffc400;
+
+  --dark-outline-blue: rgba(37,132,255,0.6);
+}
+/* Apply dark mode colors */
+
+.dark {
+  background: var(--dark-background);
+  color: var(--dark-primary-text); 
+}
+
+.dark .sidebar {
+  background: var(--dark-gray-95);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5); 
+}
+
+.dark .sidebar-header {
+  color: var(--dark-primary-text);
+}
+
+.dark .sidebar-note-excerpt {
+  color: var(--dark-secondary-text);
+}
+
+.dark .note {
+  background: var(--dark-gray-90);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Update colors */
+.dark a {
+  color: var(--dark-primary-text);
+}
+
+.dark code {
+  background: var(--dark-yellow);
+}
+
+.dark pre {
+  background: var(--dark-gray-95);
+}
+
+/* Update borders */ 
+.dark hr {
+  border-top: 1px solid var(--dark-gray-80);
+  border-bottom: 1px solid var(--dark-gray-70); 
+}
+
+.dark .sidebar-note-open {
+  background: var(--dark-gray-95); 
+}
+
+.dark .sidebar-note-open:hover {
+  background: var(--dark-gray-90);
+}
+
+/* Update buttons */
+.dark .edit-button--solid {
+  background: var(--dark-primary-blue);
+}
+
+.dark .edit-button--solid:hover {
+  background: var(--dark-secondary-blue); 
+}
+
+.dark .edit-button--outline {
+  background: var(--dark-gray-90);
+  color: var(--dark-yellow);
+  border: 1px solid var(--dark-yellow); 
+}
+
+.dark .edit-button--outline:hover {
+  background: rgba(255,255,255, 0.1);
+}
+
+.dark .note-editor-done {
+  background: var(--dark-primary-blue);
+}
+
+.dark .note-editor-done:hover {
+  background: var(--dark-secondary-blue);
+}
+
+.dark .note-editor-delete {
+  color: var(--dark-red-25);
+  border: 1px solid var(--dark-red-25);
+}
+
+.dark .search input {
+  background: var(--dark-gray-90);
+  border: 1px solid var(--dark-gray-80);
+  color: var(--dark-primary-text);  
+}
+
+.dark .search input::placeholder {
+  color: var(--dark-secondary-text);
+}
+
+.dark .search input:focus {
+  box-shadow: var(--dark-outline-blue); 
 }
 
 html {
@@ -308,9 +433,6 @@ ul.notes-list {
 }
 .light > .sidebar {
   background: var(--white);
-}
-.dark .sidebar {
-  background:#151d28;
 }
 .sidebar-header {
   letter-spacing: 0.15em;
