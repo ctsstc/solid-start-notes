@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, createSignal, JSX, useContext } from "solid-js";
+import { Theme } from "~/lib/theme-model";
 
 const defaultSignalValue = createSignal(true);
 export const context = createContext(defaultSignalValue);
@@ -14,7 +15,7 @@ export const Provider = (props: ProviderProps) => {
 
   return (
     <context.Provider value={defaultSignalValue}>
-      <div class={darkMode() ? "dark" : "light"}>{props.children}</div>
+      <div class={darkMode() ? Theme.Dark : Theme.Light}>{props.children}</div>
     </context.Provider>
   );
 };
@@ -22,10 +23,12 @@ export const Provider = (props: ProviderProps) => {
 export const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useContext(context);
 
+  const toggleDarkMode = () => setDarkMode(!darkMode());
+
   return (
     <button
       class="dark-mode-toggle"
-      onClick={() => setDarkMode(!darkMode())}
+      onClick={toggleDarkMode}
       style={{
         "background-color": darkMode() ? "var(--gray-20)" : "var(--gray-80)",
         color: darkMode() ? "white" : "black",
